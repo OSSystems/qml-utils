@@ -19,7 +19,7 @@ public:
     explicit Process(QObject *parent = 0);
 
 public slots:
-    void start(const QString &program, const QStringList &arguments);
+    void start(const QString &program, const QStringList &arguments = QStringList());
 
 signals:
     void finished(int exitCode, QProcess::ExitStatus exitStatus);
