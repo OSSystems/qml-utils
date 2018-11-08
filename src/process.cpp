@@ -20,3 +20,13 @@ void Process::start(const QString &program, const QStringList &arguments)
 {
     m_process->start(program, arguments);
 }
+
+QString Process::readAllStandardOutput()
+{
+    return m_process->readAllStandardOutput();
+}
+
+bool Process::waitForFinished(int msecs)
+{
+    return m_process->waitForFinished(msecs);
+}

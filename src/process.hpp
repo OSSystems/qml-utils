@@ -21,6 +21,9 @@ public:
 public slots:
     void start(const QString &program, const QStringList &arguments = QStringList());
 
+    QString readAllStandardOutput();
+    bool waitForFinished(int msecs = 30000);
+
 signals:
     void finished(int exitCode, QProcess::ExitStatus exitStatus);
 
